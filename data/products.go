@@ -31,6 +31,10 @@ func GetProducts() Products {
 	return products
 }
 
+func AddProducts(p *Product){
+	products = append(products, p)
+}
+
 type Products []*Product
 
 func (p *Products) ToJson(w io.Writer) error {
